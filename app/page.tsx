@@ -1,18 +1,17 @@
-import About from '@/components/layout/About'
-import Header from '@/components/layout/Header'
-import Timer from '@/components/layout/Timer'
+import Timer from '@/components/layout/timer/Timer'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 import React from 'react'
 
-const page = () => {
+export default function Home() {
   return (
-    <div className='bg-gray-900 min-h-screen text-white'>
-      <div className='max-w-2xl min-h-screen  mx-auto'>
-        <Header></Header>
-        <Timer></Timer>
-        <About></About>
-      </div>
-    </div>
+    <main className="flex min-h-screen items-center justify-center bg-muted">
+      <Card className="w-90">
+        <CardContent className="pt-8">
+          <Timer/>
+        </CardContent>
+      </Card>
+    </main>
+    
   )
 }
-
-export default page
