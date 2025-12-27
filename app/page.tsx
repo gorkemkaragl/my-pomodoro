@@ -11,7 +11,7 @@ export default function Home() {
           <TimerHeader></TimerHeader>
 
       <Card className="w-full border border-border bg-card/90 backdrop-blur">
-        <CardContent className="p-16">
+        <CardContent className="pt-8 pb-12">
           <Timer/>
         </CardContent>
       </Card>
