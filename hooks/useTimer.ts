@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { STAGES, Stage } from "@/components/layout/timer/constants";
 
 const alarm =
-  typeof window !== "undefined" ? new Audio("/alarm.mp3") : null;
+  typeof window !== "undefined" ? new Audio("/sounds/alarm.mp3") : null;
 
 export function useTimer() {
   const [stage, setStage] = useState<Stage>("pomodoro");
@@ -47,7 +47,7 @@ export function useTimer() {
     const seconds = secondsLeft % 60;
     document.title = `${minutes}:${seconds
       .toString()
-      .padStart(2, "0")} - ${stage}`;
+      .padStart(2, "0")} - Pomodoro Timer`;
   }, [secondsLeft, stage]);
 
   // aşamaları değiştirme

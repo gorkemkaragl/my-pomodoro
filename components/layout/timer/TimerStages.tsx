@@ -14,11 +14,11 @@ export default function TimerStages({ stage, onChange }: Props) {
         <button
           key={item}
           onClick={() => onChange(item)}
-          className={`capitalize transition-colors ${
-            stage === item
-              ? "text-primary"
-              : "text-muted-foreground hover:text-foreground"
-          }`}
+          className={`uppercase text-xs tracking-wider transition-colors ${
+  stage === item
+    ? "text-primary border-b-2 border-primary"
+    : "text-muted-foreground hover:text-foreground"
+}`}
         >
           {item.replace("Break", " Break")}
         </button>

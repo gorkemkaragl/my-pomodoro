@@ -4,6 +4,7 @@ import { useTimer } from "@/hooks/useTimer";
 import TimerDisplay from "./TimerDisplay";
 import TimerControls from "./TimerControls";
 import TimerStages from "./TimerStages";
+import TimerHeader from "./TimerHeader";
 
 
 
