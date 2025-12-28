@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { STAGES, Stage } from "@/components/layout/timer/constants";
+import { STAGES, Stage } from "@/components/timer/constants";
 
 const alarm =
   typeof window !== "undefined" ? new Audio("/sounds/alarm.mp3") : null;

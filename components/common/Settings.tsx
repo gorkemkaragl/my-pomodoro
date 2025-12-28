@@ -6,9 +6,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import {  SettingsIcon } from 'lucide-react';
+import { SettingsIcon } from "lucide-react";
 
-import React from "react";
 import SoundToggle from "./SoundToggle";
 
 type Props = {

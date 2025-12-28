@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from "react";
 
 export function useAmbience(isRunning: boolean) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [muted, setMuted] = useState(true);
+
+  // Mute durumu
+  const [muted, setMuted] = useState(false);
 
   useEffect(() => {
     audioRef.current = new Audio("/sounds/bb-sound.mp3");
@@ -20,10 +22,9 @@ export function useAmbience(isRunning: boolean) {
 
     if (isRunning && !muted) {
       audioRef.current.play().catch(() => {});
-      console.log("çalışıyor")
-
+      console.log("çalışıyor");
     } else {
-      console.log("çalışmıy")
+      console.log("çalışmıyor");
       audioRef.current.pause();
     }
   }, [isRunning, muted]);

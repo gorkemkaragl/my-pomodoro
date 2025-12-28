@@ -15,10 +15,10 @@ export default function TimerStages({ stage, onChange }: Props) {
           key={item}
           onClick={() => onChange(item)}
           className={`uppercase text-xs tracking-wider transition-colors ${
-  stage === item
-    ? "text-primary border-b-2 border-primary"
-    : "text-muted-foreground hover:text-foreground"
-}`}
+            stage === item
+              ? "text-primary border-b-2 border-primary"
+              : "text-muted-foreground hover:text-foreground"
+          }`}
         >
           {item.replace("Break", " Break")}
         </button>

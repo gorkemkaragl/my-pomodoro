@@ -1,9 +1,9 @@
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image'
+import React from 'react'
 
-export default function TimerHeader() {
+export default function Header() {
   return (
-    <div className="flex flex-col items-center gap-4 pb-16 ">
+    <div className="flex flex-col items-center gap-4 pb-10 ">
       <Image
         className="select-none"
         src="/breaking-bad-seeklogo.png"
@@ -17,5 +17,5 @@ export default function TimerHeader() {
         Pomodoro
       </h1>
     </div>
-  );
+  )
 }
