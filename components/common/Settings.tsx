@@ -83,6 +83,8 @@ export default function Settings({ muted, toggleMute }: Props) {
                 disabled={isRunning}
                 className="w-20"
                 type="number"
+                min={"1"}
+                max={"240"}
                 value={local.pomodoro}
                 onChange={(e) =>
                   setLocal((l) => ({
@@ -99,6 +101,8 @@ export default function Settings({ muted, toggleMute }: Props) {
                 disabled={isRunning}
                 className="w-20"
                 type="number"
+                min={"1"}
+                max={"45"}
                 value={local.shortBreak}
                 onChange={(e) =>
                   setLocal((l) => ({
@@ -116,6 +120,8 @@ export default function Settings({ muted, toggleMute }: Props) {
                 disabled={isRunning}
                 className="w-20"
                 type="number"
+                min={"1"}
+                max={"60"}
                 value={local.longBreak}
                 onChange={(e) =>
                   setLocal((l) => ({
