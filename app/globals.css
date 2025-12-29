@@ -115,6 +115,8 @@
     @apply bg-background text-foreground;
     font-family: var(--font-inter);
     font-family: var(--font-bb);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   /* Scrollbar hide */
@@ -130,15 +132,14 @@
 .bb-bg {
   background: linear-gradient(
     -45deg,
-    #0b0f0d, /* near-black green */
-    #121912, /* deep olive */
-    #16281f, /* muted emerald */
-    #1e3b2c  /* dark moss */
+    #0b0f0d,
+    /* near-black green */ #121912,
+    /* deep olive */ #16281f,
+    /* muted emerald */ #1e3b2c /* dark moss */
   );
   background-size: 400% 400%;
   animation: bbGradient 12s ease infinite;
 }
-
 
 @keyframes bbGradient {
   0% {
