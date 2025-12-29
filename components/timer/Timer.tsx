@@ -1,6 +1,6 @@
 "use client";
 
-import { useTimer } from "@/hooks/useTimer";
+import { useTimer } from "@/contexts/TimerContext";
 import TimerDisplay from "./TimerDisplay";
 import TimerControls from "./TimerControls";
 import TimerStages from "./TimerStages";

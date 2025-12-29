@@ -1,10 +1,28 @@
-import React from "react";
+"use client";
+
+import { useEffect, useState } from "react";
+import TimerSkeleton from "../common/TimerSkeleton";
 
 type Props = {
   secondsLeft: number;
 };
 
 export default function TimerDisplay({ secondsLeft }: Props) {
+
+  //başlangıç değerini localStorage’dan alırken hata oluşmasını önlemek için
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+ if (!mounted) {
+    return (
+      <TimerSkeleton />
+    );
+  } // SSR’de hiçbir şey render etme 
+
+
   const minutes = Math.floor(secondsLeft / 60);
   const seconds = secondsLeft % 60;
   return (

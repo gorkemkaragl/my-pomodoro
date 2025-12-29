@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat_Alternates, Inter } from "next/font/google";
 import "./globals.css";
+import { TimerProvider } from "@/contexts/TimerContext";
+import { Toaster } from "@/components/ui/sonner";
 
 const bbFont = Montserrat_Alternates({
   subsets: ["latin"],
@@ -30,7 +32,9 @@ export default function RootLayout({
       <body
         className={`font-inter antialiased bb-bg`}
       >
-        {children}
+        <TimerProvider>{children}
+          <Toaster richColors position="top-right" />
+        </TimerProvider>
       </body>
     </html>
   );
