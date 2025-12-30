@@ -142,7 +142,7 @@ export default function Settings({ muted, toggleMute }: Props) {
                 Reset
               </Button>
               <Button disabled={isRunning} type="submit">
-                Kaydet
+                Save
               </Button>
             </div>
           </form>
