@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className=" dark">
       <body
-        className={`font-inter antialiased bb-bg`}
+        className={`font-inter antialiased  `}
       >
         <TimerProvider>{children}
           <Toaster richColors position="top-right" />

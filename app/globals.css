@@ -47,6 +47,7 @@
 }
 
 :root {
+  
   --font-bb: "Montserrat Alternates", sans-serif;
   --font-inter: "Inter", sans-serif;
   --background: #0f1a14; /* çok koyu yeşil-siyah */
@@ -112,11 +113,11 @@
     @apply border-border outline-ring/50;
   }
   body {
+    
     @apply bg-background text-foreground;
     font-family: var(--font-inter);
     font-family: var(--font-bb);
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
+    
   }
 
   /* Scrollbar hide */
@@ -129,26 +130,4 @@
     -ms-overflow-style: none;
   }
 }
-.bb-bg {
-  background: linear-gradient(
-    -45deg,
-    #0b0f0d,
-    /* near-black green */ #121912,
-    /* deep olive */ #16281f,
-    /* muted emerald */ #1e3b2c /* dark moss */
-  );
-  background-size: 400% 400%;
-  animation: bbGradient 12s ease infinite;
-}
 
-@keyframes bbGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
